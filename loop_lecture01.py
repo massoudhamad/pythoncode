@@ -88,10 +88,63 @@ while(i<=10):
     i=i+1"""
     
 #nested loop
-for h in range(0,24):
+""" for h in range(0,24):
     for m in range(0,60):
         for s in range(0,60):
-            print(h,":",m,":",s)    
+            print(h,":",m,":",s)  """
+
+def calculate_grade(score):
+    if 90 <= score <= 100:
+        return 'A'
+    elif 80 <= score < 90:
+        return 'B'
+    elif 70 <= score < 80:
+        return 'C'
+    elif 60 <= score < 70:
+        return 'D'
+    else:
+        return 'F'
+
+def main():
+    # Get the number of students
+    while True:
+        try:
+            num_students = int(input("Enter the number of students in the class: "))
+            if num_students > 0:
+                break
+            else:
+                print("Please enter a positive number of students.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+    total_class_score = 0
+
+    # Loop through each student
+    for student in range(1, num_students + 1):
+        while True:
+            try:
+                # Get the test score for each student
+                score = float(input(f"Enter the test score for student {student}: "))
+                if score >= 0:
+                    break
+                else:
+                    print("Please enter a positive test score.")
+            except ValueError:
+                print("Invalid input. Please enter a valid test score.")
+
+        # Calculate and display the grade for each student
+        grade = calculate_grade(score)
+        print(f"Grade for student {student}: {grade}")
+
+        # Accumulate the score for class average
+        total_class_score += score
+
+    # Calculate and display the overall class average
+    class_average = total_class_score / num_students
+    print(f"\nOverall class average: {class_average:.2f}")
+
+if __name__ == "__main__":
+    main()  
         
 
 
