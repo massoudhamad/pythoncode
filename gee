@@ -1,0 +1,17 @@
+import ee
+
+# Initialize the Earth Engine module.
+ee.Initialize()
+
+# Define the years of interest.
+years = ee.List.sequence(2000, 2020)
+
+# Define the NDVI collection.
+yearlyNDVI = ee.ImageCollection('MODIS/006/MOD13A1').select('NDVI')
+
+# Add yearly NDVI layers to the map.
+years.getInfo().forEach(function(year) {
+    var NDVI_Image = yearlyNDVI.filter(ee.Filter.calendarRange(year, year, 'year')).first()
+    Map.addLayer(NDVI_Image, {min: -1, max: 1, palette: ['red', 'green']}, 'Median Yearly NDVI ' + year)
+})
+
