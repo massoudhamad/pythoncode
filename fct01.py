@@ -1,12 +1,19 @@
-"""def hello(start,end):
-    print("hello",start,end)
-
-hello("Naifat","Anilyamin")
 """
+def hello(start, end):
+    print("hello", start, end)
+
+
+hello("Naifat", "Anilyamin")
+"""
+
+
 def square(n):
-    return n*n
+    return n * n
+
+
 def main():
-    x=int(input("What's x? "))
-    print(x," squares is ",square(x))
+    x = int(input("What's x? "))
+    print(x, " squares is ", square(x))
+
 
 main()

@@ -1,5 +1,6 @@
 """for i in range(1,1001,1):
     print(i)"""
+
 """mysales = [3,5,1,4,1,5,1,3,4,2]
 for i in mysales:
     print(i)"""
@@ -14,8 +15,8 @@ print("Total Sum is ",sum) """
 """ my_data=[3,6,7,19]
 for i in my_data:
     print(i) """
-    
-#while loop
+
+# while loop
 """ 1-100 """
 """i=1
 while(i>=1):
@@ -42,7 +43,7 @@ def main():
     summation(number)
 main()"""
 
-#sentinel value
+# sentinel value
 """def grade(score):
     if(score<0 or score >100):
         return "Invalid Marks"
@@ -69,7 +70,7 @@ def main():
 
 main()"""
 
-#break and continue
+# break and continue
 """for i in range(1,10):
     if i==5:
         break
@@ -86,24 +87,26 @@ while(i<=10):
         continue
     print(i)
     i=i+1"""
-    
-#nested loop
+
+# nested loop
 """ for h in range(0,24):
     for m in range(0,60):
         for s in range(0,60):
             print(h,":",m,":",s)  """
 
+
 def calculate_grade(score):
     if 90 <= score <= 100:
-        return 'A'
+        return "A"
     elif 80 <= score < 90:
-        return 'B'
+        return "B"
     elif 70 <= score < 80:
-        return 'C'
+        return "C"
     elif 60 <= score < 70:
-        return 'D'
+        return "D"
     else:
-        return 'F'
+        return "F"
+
 
 def main():
     # Get the number of students
@@ -143,13 +146,6 @@ def main():
     class_average = total_class_score / num_students
     print(f"\nOverall class average: {class_average:.2f}")
 
+
 if __name__ == "__main__":
-    main()  
-        
-
-
-    
-        
-
-
-    
+    main()
