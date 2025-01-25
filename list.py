@@ -1,32 +1,39 @@
-l=[3,5,8,"Omar"]
-""" print(l[0]) #3
-print(l[3]) #Omar
-print(len(l)) """
+"""
+l = [3, 5, 8, "Omar"]
 
-""" for x in l:
-    print(x) """
+print(l[0])  # 3
+print(l[3])  # Omar
+print(len(l))
 
-""" l.append(6)
+
+for x in l:
+    print(x)
+
+l.append(6)
 
 for x in range(len(l)):
-    print(x,"\t",l[x]) """
-    
-    
-""" s= "I <3 cs"
+    print(x, "\t", l[x])
+"""
+
+"""
+s = "I <3 cs"
 print(list(s))
-re="BITA/7/23/001/TZ"
+re = "BITA/7/23/001/TZ"
 list(re)
 print(re.split("/"))
-print(''.join(re)) """
+print("".join(re))
+"""
 
-months=["Jan","Feb","Mar","Dec"]
+months = ["Jan", "Feb", "Mar", "Dec"]
 rainfall = []
+
 for m in range(len(months)):
-    rain=input("Enter your rainfall for the month "+months[m]+": ")
-    rainfall.extend(int(rain))
-max=rainfall[0]
-min=rainfall[0]
+    rain = int(input("Enter your rainfall for the month " + months[m] + ": "))
+    rainfall.append(rain)
+
+max = max(rainfall)
+min = min(rainfall)
+print(min, max)
+
 for x in rainfall:
     print(x)
-    
-
